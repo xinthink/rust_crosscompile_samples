@@ -1,7 +1,3 @@
-use jni::JNIEnv;
-use jni::sys::jlong;
-use jni::objects::JClass;
-
 // The shared function
 pub fn add(left: i64, right: i64) -> i64 {
     left + right
@@ -19,6 +15,13 @@ mod tests {
 }
 
 // Interfaces for targeted OSs
+
+#[cfg(feature = "android")]
+use jni::{
+    JNIEnv,
+    objects::JClass,
+    sys::jlong,
+};
 
 #[cfg(feature = "android")]
 #[no_mangle]
