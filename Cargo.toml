@@ -4,18 +4,20 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "staticlib"]
 
 [features]
 default = ["android"]
 android = ["dep:jni", "dep:android_logger"]
-ohos = ["dep:ohos-node-bindgen", "dep:socket2"]
+#ohos = ["dep:ohos-node-bindgen", "dep:socket2"]
+ohos = ["dep:oh-napi-sys", "dep:socket2"]
 
 [dependencies]
 jni = { version = "0.19.0", optional = true }
 android_logger = { version = "0.13.3", optional = true }
-ohos-node-bindgen = { version = "6.0.3", optional = true }
+#ohos-node-bindgen = { version = "6.0.3", optional = true }
 socket2 = { version = "0.4.10", optional = true }
+oh-napi-sys = { version = "0.1.1", package="oh-napi-sys", optional = true }
 dashmap = "5.5.3"
 threadpool = "1.8.1"
 log = "0.4.21"
