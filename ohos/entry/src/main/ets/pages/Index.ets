@@ -5,7 +5,7 @@ import testNapi from 'libhello.so';
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
+  @State message: string = 'Hello OHOS';
   @State result: number = 0;
 
   build() {

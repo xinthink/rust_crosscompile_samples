@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var cStr = rust_greeting("Rust world")!
+    @State var message = rust_greeting("Rust world")!
 
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text(String(cString: cStr))
+            Text(String(cString: message))
         }
         .padding()
     }
 
     func onDisappear() {
-      rust_greeting_free(UnsafeMutablePointer(mutating: cStr))
+      rust_greeting_free(UnsafeMutablePointer(mutating: message))
     }
 }
 
