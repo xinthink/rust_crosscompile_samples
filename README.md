@@ -15,4 +15,4 @@ Then the above code can be cross-compiled against different target platform and 
 |------|------|---|
 | Android | <img src="screenshots/android_snippet.png" width=500 /> | <img src="screenshots/android_screenshot.png" width=300 /> |
 | HarmonyOS NEXT | `this.result = testNapi.add(this.result, 2);` | <img src="screenshots/hmos_screenshot.png" width=300 /> |
-| iOS | `@State var message = rust_greeting("Rust world")` | <img src="screenshots/ios_screenshot.png" width=300 /> |
+| iOS | `@State var message = rust_greeting("Rust world")` | <img src="screenshots/ios_screenshot.PNG" width=300 /> |
